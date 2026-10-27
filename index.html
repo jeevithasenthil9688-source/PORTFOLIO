@@ -1,0 +1,1454 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Page Title & Meta Info -->
+  <title>Jeevitha Mani S | Electrical & Electronics Engineer | IoT & Embedded Systems</title>
+  <meta name="description" content="Portfolio of Jeevitha Mani S — 3rd-year Electrical and Electronics Engineering student specializing in Embedded Systems, IoT, Microcontrollers (PIC, ESP32), and Software Development.">
+  <meta name="keywords" content="Jeevitha Mani S, Electrical Engineering, EEE, Embedded Systems, IoT, ESP32, PIC Microcontroller, Sri Shakthi Institute, Engineer Portfolio">
+  <meta name="author" content="Jeevitha Mani S">
+  
+  <!-- Favicon -->
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg">
+  
+  <!-- Google Fonts: Space Grotesk (Tech Headings), Inter (Body), JetBrains Mono (Tech Tags) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=Space+Grotesk:wght@500;600;700;800&display=swap" rel="stylesheet">
+  
+  <!-- Custom Stylesheet -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Background interactive circuit canvas & subtle grid -->
+  <canvas id="circuit-canvas"></canvas>
+  <div class="circuit-overlay"></div>
+
+  <!-- Entire site content wrapper -->
+  <div class="site-wrapper">
+
+    <!-- =======================================================================
+         NAVIGATION BAR
+         Sticky, translucent navbar with active-link highlight & theme toggle
+         ======================================================================= -->
+    <header class="navbar" id="navbar">
+      <div class="container nav-container">
+        <!-- Logo / Brand -->
+        <a href="#hero" class="brand-logo" aria-label="Jeevitha Mani Home">
+          <div class="brand-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+            </svg>
+          </div>
+          <span>Jeevitha<span class="dot">.</span></span>
+        </a>
+
+        <!-- Desktop Navigation Links -->
+        <nav class="nav-links" id="nav-links">
+          <a href="#about" class="nav-link">About</a>
+          <a href="#education" class="nav-link">Education</a>
+          <a href="#skills" class="nav-link">Skills</a>
+          <a href="#projects" class="nav-link">Projects</a>
+          <a href="#experience" class="nav-link">Experience</a>
+          <a href="#patents-publications" class="nav-link">Patents & Research</a>
+          <a href="#achievements" class="nav-link">Achievements</a>
+          <a href="#contact" class="nav-link">Contact</a>
+        </nav>
+
+        <!-- Right Side: Dark/Light Mode Toggle + Mobile Menu Icon -->
+        <div class="nav-actions">
+          <!-- Theme Toggle Switch -->
+          <button class="theme-toggle" id="theme-toggle" aria-label="Toggle Light/Dark Theme" title="Toggle Theme">
+            <!-- Sun Icon (for switching to light mode) -->
+            <svg class="sun-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="12" cy="12" r="5"></circle>
+              <line x1="12" y1="1" x2="12" y2="3"></line>
+              <line x1="12" y1="21" x2="12" y2="23"></line>
+              <line x1="4.22" y1="4.22" x2="5.64" y2="5.64"></line>
+              <line x1="18.36" y1="18.36" x2="19.78" y2="19.78"></line>
+              <line x1="1" y1="12" x2="3" y2="12"></line>
+              <line x1="21" y1="12" x2="23" y2="12"></line>
+              <line x1="4.22" y1="19.78" x2="5.64" y2="18.36"></line>
+              <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
+            </svg>
+            <!-- Moon Icon (for switching to dark mode) -->
+            <svg class="moon-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"></path>
+            </svg>
+          </button>
+
+          <!-- Mobile Hamburger Toggle -->
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation Menu">
+            <span></span>
+            <span></span>
+            <span></span>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- =======================================================================
+         1. HERO SECTION
+         Photo, Name, Animated Typing Title, Tagline, Action Buttons & Socials
+         ======================================================================= -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          
+          <!-- Left Column: Introduction & Call to Actions -->
+          <div class="hero-content">
+            <!-- Availability Badge -->
+            <div class="hero-badge">
+              <span class="pulse-dot"></span>
+              <span>Available for Internships & Projects</span>
+            </div>
+
+            <!-- Greeting & Full Name -->
+            <h1 class="hero-title">
+              Hi, I'm <span class="gradient-text">Jeevitha Mani S</span>
+            </h1>
+
+            <!-- Animated Typing Effect for Titles -->
+            <div class="hero-subtitle-container">
+              <span>I am an </span>
+              <span class="typing-text" id="typing-text">Electrical & Electronics Engineer</span>
+            </div>
+
+            <!-- Professional Tagline (Action-oriented, derived from resume) -->
+            <p class="hero-tagline">
+              Engineering student combining analytical problem solving with hands-on IoT & embedded hardware expertise to build reliable, user-focused solutions for real-world challenges.
+            </p>
+
+            <!-- Action Buttons: Download Resume & Contact -->
+            <div class="hero-buttons">
+              <!-- Linked directly to uploaded resume.pdf -->
+              <a href="assets/resume.pdf" download="Jeevitha_Mani_S_Resume.pdf" class="btn btn-primary" title="Download Full Resume">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                  <polyline points="7 10 12 15 17 10"></polyline>
+                  <line x1="12" y1="15" x2="12" y2="3"></line>
+                </svg>
+                <span>Download Resume</span>
+              </a>
+
+              <a href="#contact" class="btn btn-secondary">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Contact Me</span>
+              </a>
+            </div>
+
+            <!-- Social Links & Channels -->
+            <div class="hero-socials">
+              <span class="hero-socials-label">Connect:</span>
+              
+              <!-- LinkedIn -->
+              <a href="https://www.linkedin.com/in/jeevitha-mani-773143333" target="_blank" rel="noopener noreferrer" class="social-pill" title="LinkedIn Profile" aria-label="LinkedIn">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                  <rect x="2" y="9" width="4" height="12"></rect>
+                  <circle cx="4" cy="4" r="2"></circle>
+                </svg>
+              </a>
+
+              <!-- GitHub -->
+              <a href="https://github.com/jeevithasenthil9688-source" target="_blank" rel="noopener noreferrer" class="social-pill" title="GitHub Profile" aria-label="GitHub">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+                </svg>
+              </a>
+
+              <!-- Email Direct -->
+              <a href="mailto:jeevithasenthil71@gmail.com" class="social-pill" title="Send Email" aria-label="Email">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                  <polyline points="22,6 12,13 2,6"></polyline>
+                </svg>
+              </a>
+
+              <!-- Phone Direct -->
+              <a href="tel:+919942008781" class="social-pill" title="Call Jeevitha" aria-label="Phone">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
+                </svg>
+              </a>
+            </div>
+
+          </div>
+
+          <!-- Right Column: Professional Photo with Circuit Glow & Floating Badges -->
+          <div class="hero-visual">
+            <div class="hero-image-wrapper">
+              <!-- Animated Glowing Electric Ring -->
+              <div class="hero-image-ring"></div>
+              
+              <!-- Border Container -->
+              <div class="hero-image-border">
+                <img src="assets/photo.jpg" alt="Jeevitha Mani S - Electrical & Electronics Engineering Student" class="hero-photo">
+              </div>
+
+              <!-- Floating Stat Chip 1 (Top Left) -->
+              <div class="hero-floating-chip hero-chip-top">
+                <div class="chip-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+                  </svg>
+                </div>
+                <div class="chip-text">
+                  <span>8.68 CGPA</span>
+                  <small>Rank 2 Academic Sem 4</small>
+                </div>
+              </div>
+
+              <!-- Floating Stat Chip 2 (Bottom Right) -->
+              <div class="hero-floating-chip hero-chip-bottom">
+                <div class="chip-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+                  </svg>
+                </div>
+                <div class="chip-text">
+                  <span>2 Patents</span>
+                  <small>Innovations Filed</small>
+                </div>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         QUICK STATS STRIP
+         Live counting metrics derived strictly from the resume
+         ======================================================================= -->
+    <section class="stats-section" id="stats">
+      <div class="container">
+        <div class="stats-grid">
+          <!-- Stat 1: CGPA -->
+          <div class="stat-card reveal">
+            <div class="stat-number" data-target="8.68" data-decimal="true">0.00</div>
+            <div class="stat-label">B.E. EEE CGPA</div>
+            <div class="stat-detail">Sri Shakthi Inst. of Engg & Tech</div>
+          </div>
+
+          <!-- Stat 2: Patents Filed / Published -->
+          <div class="stat-card reveal">
+            <div class="stat-number" data-target="2" data-decimal="false">0</div>
+            <div class="stat-label">Patents Filed</div>
+            <div class="stat-detail">Smart Bus & Waste Disposal</div>
+          </div>
+
+          <!-- Stat 3: Hardware & IoT Projects -->
+          <div class="stat-card reveal">
+            <div class="stat-number" data-target="3" data-suffix="+" data-decimal="false">0</div>
+            <div class="stat-label">Major Projects</div>
+            <div class="stat-detail">ESP32, Sensors & IoT Cloud</div>
+          </div>
+
+          <!-- Stat 4: Industrial Internships -->
+          <div class="stat-card reveal">
+            <div class="stat-number" data-target="3" data-decimal="false">0</div>
+            <div class="stat-label">Industrial Experiences</div>
+            <div class="stat-detail">EV, Embedded & Manufacturing</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         2. ABOUT ME SECTION
+         Comprehensive background, career objective, and key strengths
+         ======================================================================= -->
+    <section class="about-section" id="about">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="12" r="10"></circle>
+              <line x1="12" y1="16" x2="12" y2="12"></line>
+              <line x1="12" y1="8" x2="12.01" y2="8"></line>
+            </svg>
+            <span>Background</span>
+          </div>
+          <h2 class="section-title">Bridging <span class="gradient-text">Hardware</span> and <span class="gradient-text">Code</span></h2>
+          <p class="section-subtitle">Dedicated to creating intelligent, efficient, and user-centric electrical and IoT systems.</p>
+        </div>
+
+        <div class="about-grid">
+          <!-- Left: Secondary Photo Portrait Card -->
+          <div class="about-visual reveal">
+            <div class="about-photo-card">
+              <img src="assets/photo.jpg" alt="Jeevitha Mani S in formal attire" class="about-photo">
+              <div class="about-photo-badge">
+                <div>
+                  <div class="badge-title">Jeevitha Mani S</div>
+                  <div class="badge-sub">3rd-Year Electrical & Electronics Student</div>
+                </div>
+                <div class="pulse-dot"></div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Professional Narrative & Key Highlights -->
+          <div class="about-text reveal">
+            <p class="about-lead">
+              I am an engineering student with a strong foundation in software development, programming, and technology-driven problem solving, paired with practical, industrial exposure to IoT and embedded systems.
+            </p>
+            <p class="about-body">
+              Currently pursuing my B.E. in Electrical and Electronics Engineering at Sri Shakthi Institute of Engineering and Technology (CGPA: 8.68), I combine analytical thinking with hands-on hardware project experience to design efficient, reliable, and user-focused systems. 
+            </p>
+            <p class="about-body">
+              Beyond circuitry and programming, I am a collaborative team leader and active coordinator with a steadfast focus on continuous learning, technical adaptability, and delivering meaningful real-world results.
+            </p>
+
+            <!-- 4 Grid Highlight Pillars -->
+            <div class="about-highlights">
+              <!-- Pillar 1 -->
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <rect x="4" y="4" width="16" height="16" rx="2" ry="2"></rect>
+                    <rect x="9" y="9" width="6" height="6"></rect>
+                    <line x1="9" y1="1" x2="9" y2="4"></line>
+                    <line x1="15" y1="1" x2="15" y2="4"></line>
+                    <line x1="9" y1="20" x2="9" y2="23"></line>
+                    <line x1="15" y1="20" x2="15" y2="23"></line>
+                    <line x1="20" y1="9" x2="23" y2="9"></line>
+                    <line x1="20" y1="14" x2="23" y2="14"></line>
+                    <line x1="1" y1="9" x2="4" y2="9"></line>
+                    <line x1="1" y1="14" x2="4" y2="14"></line>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h4>Embedded & IoT</h4>
+                  <p>ESP32, PIC16F887, Sensors, Actuators</p>
+                </div>
+              </div>
+
+              <!-- Pillar 2 -->
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <polyline points="16 18 22 12 16 6"></polyline>
+                    <polyline points="8 6 2 12 8 18"></polyline>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h4>Software Proficiency</h4>
+                  <p>Java, C/C++, Python, OOP & DSA</p>
+                </div>
+              </div>
+
+              <!-- Pillar 3 -->
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <polygon points="12 6 12 12 16 14"></polygon>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h4>Industrial Exposure</h4>
+                  <p>EV Systems, PCB Testing & Assembly</p>
+                </div>
+              </div>
+
+              <!-- Pillar 4 -->
+              <div class="about-highlight-item">
+                <div class="highlight-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                    <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                  </svg>
+                </div>
+                <div class="highlight-info">
+                  <h4>Leadership & Events</h4>
+                  <p>Coordinator for KALAM & Media Guild</p>
+                </div>
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         3. EDUCATION SECTION
+         Timeline format displaying university and schooling details
+         ======================================================================= -->
+    <section class="education-section" id="education">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M22 10v6M2 10l10-5 10 5-10 5z"></path>
+              <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
+            </svg>
+            <span>Academic Pathway</span>
+          </div>
+          <h2 class="section-title">My <span class="gradient-text">Education</span></h2>
+          <p class="section-subtitle">Consistent academic record with a proven foundation in engineering and mathematics.</p>
+        </div>
+
+        <!-- Timeline Container -->
+        <div class="timeline">
+          <!-- Item 1: Bachelor of Engineering -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">B.E. Electrical and Electronics Engineering</h3>
+                <span class="timeline-date">2024 – 2028</span>
+              </div>
+              <div class="timeline-institution">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M3 7v14M21 7v14M7 7V3h10v4"></path>
+                </svg>
+                Sri Shakthi Institute of Engineering and Technology, Coimbatore
+              </div>
+              <div class="timeline-score">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                CGPA : 8.68 &nbsp;|&nbsp; 2nd Rank in 4th Semester Academic Performance (2025–2026)
+              </div>
+              <p class="timeline-desc">
+                Core coursework spanning Embedded Systems, Power Electronics, Digital Electronics, Microcontroller Architecture (PIC16F887), PCB Design, and Object-Oriented Programming.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2: Higher Secondary Education (HSC) -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Higher Secondary Education (HSC)</h3>
+                <span class="timeline-date">Passed in 2024</span>
+              </div>
+              <div class="timeline-institution">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M3 7v14M21 7v14M7 7V3h10v4"></path>
+                </svg>
+                Literacy Mission Matric Higher Secondary School
+              </div>
+              <div class="timeline-score">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Percentage: 81.8%
+              </div>
+              <p class="timeline-desc">
+                Completed higher secondary education with a rigorous focus on Mathematics, Physics, and Chemistry.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3: Secondary School Leaving Certificate (SSLC) -->
+          <div class="timeline-item reveal">
+            <div class="timeline-marker"></div>
+            <div class="timeline-content">
+              <div class="timeline-header">
+                <h3 class="timeline-title">Secondary School Leaving Certificate (SSLC)</h3>
+                <span class="timeline-date">Passed in 2022</span>
+              </div>
+              <div class="timeline-institution">
+                <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M3 21h18M3 7v14M21 7v14M7 7V3h10v4"></path>
+                </svg>
+                Literacy Mission Matric Higher Secondary School
+              </div>
+              <div class="timeline-score">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="20 6 9 17 4 12"></polyline>
+                </svg>
+                Percentage: 88.6%
+              </div>
+              <p class="timeline-desc">
+                Graduated secondary school with distinction, excelling in foundational sciences and analytical studies.
+              </p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         4. SKILLS SECTION
+         Grouped by category: Core EEE, Embedded/Hardware, Programming, Tools, Soft Skills
+         With interactive filter tabs and visual skill badges
+         ======================================================================= -->
+    <section class="skills-section" id="skills">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 2 7 12 12 22 7 12 2"></polygon>
+              <polyline points="2 17 12 22 22 17"></polyline>
+              <polyline points="2 12 12 17 22 12"></polyline>
+            </svg>
+            <span>Technical Toolkit</span>
+          </div>
+          <h2 class="section-title">Skills &amp; <span class="gradient-text">Competencies</span></h2>
+          <p class="section-subtitle">Proficiencies strictly compiled from coursework, hands-on hardware builds, and software development.</p>
+        </div>
+
+        <!-- Filter Buttons -->
+        <div class="skills-filter reveal">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="embedded">Embedded &amp; Hardware</button>
+          <button class="filter-btn" data-filter="core-eee">Core EEE</button>
+          <button class="filter-btn" data-filter="programming">Programming &amp; IT</button>
+          <button class="filter-btn" data-filter="tools">Software &amp; Tools</button>
+          <button class="filter-btn" data-filter="strengths">Key Strengths</button>
+        </div>
+
+        <!-- Skills Grid Cards -->
+        <div class="skills-grid">
+          
+          <!-- Card 1: Embedded Systems & Hardware -->
+          <div class="skill-category-card reveal" data-category="embedded">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <rect x="4" y="4" width="16" height="16" rx="2"></rect>
+                  <circle cx="9" cy="9" r="1.5"></circle>
+                  <circle cx="15" cy="9" r="1.5"></circle>
+                  <circle cx="9" cy="15" r="1.5"></circle>
+                  <circle cx="15" cy="15" r="1.5"></circle>
+                </svg>
+              </div>
+              <h3>Embedded &amp; IoT Hardware</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Embedded Systems
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                PIC16F887 Microcontroller
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                ESP32 SoC Development
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Embedded C Programming
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                GPS &amp; GSM Modules
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Flow &amp; Pressure Sensors
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Circuit Debugging
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 2: Core EEE -->
+          <div class="skill-category-card reveal" data-category="core-eee">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"></polygon>
+                </svg>
+              </div>
+              <h3>Core Electrical Engineering</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Digital Electronics
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                PCB Design
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Power Electronics
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                EV Systems &amp; Components
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Circuit Implementation
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Electrical Testing &amp; QC
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Solar PV Systems Design
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 3: Programming & IT Languages -->
+          <div class="skill-category-card reveal" data-category="programming">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <polyline points="16 18 22 12 16 6"></polyline>
+                  <polyline points="8 6 2 12 8 18"></polyline>
+                </svg>
+              </div>
+              <h3>Programming &amp; Software</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Java
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Python
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                C &amp; C++
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Data Structures (DSA)
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Object-Oriented Programming (OOP)
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                HTML &amp; CSS
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                JavaScript
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 4: Software, Tools & Platforms -->
+          <div class="skill-category-card reveal" data-category="tools">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path>
+                </svg>
+              </div>
+              <h3>Development Tools &amp; Platforms</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                VS Code
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Git Version Control
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                GitHub
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Microsoft Office Suite
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                IoT Cloud Dashboards
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hardware Debuggers
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 5: Key Strengths / Soft Skills -->
+          <div class="skill-category-card reveal" data-category="strengths">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"></path>
+                </svg>
+              </div>
+              <h3>Key Professional Strengths</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Problem Solving
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Communication
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Leadership
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Time Management
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Team Collaboration
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Adaptability
+              </span>
+            </div>
+          </div>
+
+          <!-- Card 6: Spoken Languages -->
+          <div class="skill-category-card reveal" data-category="strengths">
+            <div class="category-header">
+              <div class="category-icon">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="2" y1="12" x2="22" y2="12"></line>
+                  <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+                </svg>
+              </div>
+              <h3>Languages Known</h3>
+            </div>
+            <div class="skill-badges">
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                English (Fluent)
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Tamil (Native)
+              </span>
+              <span class="skill-chip">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                Hindi (Proficient)
+              </span>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         5. PROJECTS SECTION
+         Detailed cards for Smart Bus, Menstrual Waste Disposal, and Pipeline Leakage
+         ======================================================================= -->
+    <section class="projects-section" id="projects">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M2 3h6a4 4 0 0 1 4 4v14a3 3 0 0 0-3-3H2z"></path>
+              <path d="M22 3h-6a4 4 0 0 0-4 4v14a3 3 0 0 1 3-3h7z"></path>
+            </svg>
+            <span>Engineering Innovations</span>
+          </div>
+          <h2 class="section-title">Featured <span class="gradient-text">Projects</span></h2>
+          <p class="section-subtitle">Real-world IoT and embedded engineering builds featuring custom firmware, sensor integration, and patent-backed novelty.</p>
+        </div>
+
+        <!-- Projects Grid -->
+        <div class="projects-grid">
+          
+          <!-- Project 1: Smart College Bus SMS Alert System -->
+          <div class="project-card reveal">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-patent">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon></svg>
+                  Patent Application No. 202641089152
+                </span>
+                <span class="project-duration">3 Months</span>
+              </div>
+              <h3 class="project-title">Smart College Bus SMS Alert System</h3>
+              <div class="project-institution">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M7 7V3h10v4"></path></svg>
+                Sri Shakthi Institute of Engineering and Technology
+              </div>
+              <p class="project-desc">
+                Designed an ESP32-based smart bus monitoring system integrating GPS and GSM modules for live geographic location tracking and automated SMS notifications. Developed stop-based alerts triggered by an integrated door-close sensor to keep students continuously informed about live bus location and arrival schedules.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">GPS Module</span>
+                <span class="tech-tag">GSM SIM800L</span>
+                <span class="tech-tag">Door-Close Sensor</span>
+                <span class="tech-tag">Embedded C</span>
+                <span class="tech-tag">SMS Automation</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <span class="project-meta-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 14 14"></polyline></svg>
+                Patent Filed &amp; Prototyped
+              </span>
+              <a href="#patents-publications" class="project-link-btn">
+                <span>View Patent Details</span> &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 2: Compact and Energy-Efficient Solution for Menstrual Waste Disposal -->
+          <div class="project-card reveal">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-research">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><polyline points="12 6 12 12 16 14"></polyline></svg>
+                  Patent Filed &amp; Published in IJSRET
+                </span>
+                <span class="project-duration">3 Months</span>
+              </div>
+              <h3 class="project-title">Compact &amp; Energy-Efficient Solution for Menstrual Waste Disposal</h3>
+              <div class="project-institution">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M7 7V3h10v4"></path></svg>
+                Sri Shakthi Institute of Engineering and Technology
+              </div>
+              <p class="project-desc">
+                Developed an ESP32-controlled eco-friendly disposal system utilizing nichrome heating elements, real-time temperature monitoring, automated cooling fan regulation, and an informative LCD display. Programmed controlled heating-cooling thermal cycles for hygienic, energy-conscious, and safe on-site waste disposal.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Nichrome Heating</span>
+                <span class="tech-tag">Temp Sensor</span>
+                <span class="tech-tag">Cooling Fan Control</span>
+                <span class="tech-tag">16x2 LCD</span>
+                <span class="tech-tag">Relay Circuit</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <span class="project-meta-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path><path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path></svg>
+                DOI: 10.5281/zenodo.20526664
+              </span>
+              <a href="https://doi.org/10.5281/zenodo.20526664" target="_blank" rel="noopener noreferrer" class="project-link-btn">
+                <span>View Paper DOI</span> &rarr;
+              </a>
+            </div>
+          </div>
+
+          <!-- Project 3: Real-Time Pipeline Leakage and Blockage Detection -->
+          <div class="project-card reveal">
+            <div>
+              <div class="project-top">
+                <span class="project-badge badge-iot">
+                  <svg width="12" height="12" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 10h-1.26A8 8 0 1 0 9 20h9a5 5 0 0 0 0-10z"></path></svg>
+                  IoT Cloud Telemetry System
+                </span>
+                <span class="project-duration">3 Months</span>
+              </div>
+              <h3 class="project-title">Real-Time Pipeline Leakage &amp; Blockage Detection with IoT Cloud</h3>
+              <div class="project-institution">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 21h18M3 7v14M21 7v14M7 7V3h10v4"></path></svg>
+                Sri Shakthi Institute of Engineering and Technology
+              </div>
+              <p class="project-desc">
+                Designed an ESP32-powered industrial fluid pipeline monitoring system integrating continuous flow and pressure sensing to detect leakages and blockages in real time. Connected the embedded system to a live IoT cloud dashboard for graphical status visualization, instant threshold alerts, and remote fault diagnosis.
+              </p>
+              <div class="project-tech-stack">
+                <span class="tech-tag">ESP32</span>
+                <span class="tech-tag">Flow Sensors</span>
+                <span class="tech-tag">Pressure Transducers</span>
+                <span class="tech-tag">IoT Cloud Dashboard</span>
+                <span class="tech-tag">Remote Fault Monitoring</span>
+              </div>
+            </div>
+            <div class="project-footer">
+              <span class="project-meta-pill">
+                <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"></circle><line x1="22" y1="12" x2="18" y2="12"></line><line x1="6" y1="12" x2="2" y2="12"></line><line x1="12" y1="6" x2="12" y2="2"></line><line x1="12" y1="22" x2="12" y2="18"></line></svg>
+                Live Cloud Telemetry
+              </span>
+              <a href="#skills" class="project-link-btn">
+                <span>View Tech Stack</span> &rarr;
+              </a>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         6. INTERNSHIPS & INDUSTRIAL EXPERIENCE
+         Ozotec Automobile, Manfree Technologies, MJP Enterprises, and Field Visits
+         ======================================================================= -->
+    <section class="experience-section" id="experience">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+              <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+            </svg>
+            <span>Hands-on Industry Exposure</span>
+          </div>
+          <h2 class="section-title">Internships &amp; <span class="gradient-text">Experience</span></h2>
+          <p class="section-subtitle">Practical industry training spanning electric vehicle systems, embedded microcontroller programming, and manufacturing.</p>
+        </div>
+
+        <!-- Experience Cards Grid -->
+        <div class="experience-grid">
+          
+          <!-- Experience 1: Ozotec Automobile Private Limited -->
+          <div class="exp-card reveal">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3>Ozotec Automobile Private Limited</h3>
+                <span class="exp-role">Industrial Intern – Electric Vehicle Systems</span>
+              </div>
+              <span class="exp-date">Sep 3, 2025 – Sep 16, 2025</span>
+            </div>
+            <p class="exp-desc">
+              Worked with EV systems, embedded technologies, electrical components, rigorous functional testing, and electrical troubleshooting in a production-scale industrial setup.
+            </p>
+            <div class="exp-tags">
+              <span class="tech-tag">EV Systems</span>
+              <span class="tech-tag">Electrical Components</span>
+              <span class="tech-tag">Industrial Testing</span>
+              <span class="tech-tag">Troubleshooting</span>
+            </div>
+          </div>
+
+          <!-- Experience 2: Manfree Technologies -->
+          <div class="exp-card reveal">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3>Manfree Technologies</h3>
+                <span class="exp-role">Embedded Systems &amp; Firmware Intern</span>
+              </div>
+              <span class="exp-date">Jan 5, 2026 – Jan 24, 2026</span>
+            </div>
+            <p class="exp-desc">
+              Gained hands-on experience in circuit implementation, microcontroller programming (PIC architecture), hardware testing protocols, and embedded-system debugging.
+            </p>
+            <div class="exp-tags">
+              <span class="tech-tag">Circuit Implementation</span>
+              <span class="tech-tag">Microcontroller Programming</span>
+              <span class="tech-tag">Hardware Testing</span>
+              <span class="tech-tag">Embedded Debugging</span>
+            </div>
+          </div>
+
+          <!-- Experience 3: MJP Enterprises Pvt Ltd -->
+          <div class="exp-card reveal">
+            <div class="exp-header">
+              <div class="exp-company-info">
+                <h3>MJP Enterprises Pvt Ltd</h3>
+                <span class="exp-role">Industrial Trainee – Motor &amp; Pump Engineering</span>
+              </div>
+              <span class="exp-date">Industrial Exposure</span>
+            </div>
+            <p class="exp-desc">
+              Explored motor and pump manufacturing processes with direct practical exposure to physical assembly line operations, electrical testing, component quality inspection, and troubleshooting.
+            </p>
+            <div class="exp-tags">
+              <span class="tech-tag">Motor &amp; Pump Assembly</span>
+              <span class="tech-tag">Electrical Testing</span>
+              <span class="tech-tag">Component Inspection</span>
+              <span class="tech-tag">Quality Assurance</span>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Industrial Exposure & Field Visits Box -->
+        <div class="visits-box reveal">
+          <div class="visits-title">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"></path>
+              <circle cx="12" cy="12" r="3"></circle>
+            </svg>
+            <span>Industrial Field Visits &amp; Production Exposure</span>
+          </div>
+          <div class="visits-grid">
+            
+            <div class="visit-item">
+              <h4>Flowtech Poly Products Pvt. Ltd.</h4>
+              <span class="visit-badge">1-Day Industrial Observation</span>
+              <p>Observed plastic product manufacturing operations, plant workflow pipelines, machinery automation, and quality-control practices.</p>
+            </div>
+
+            <div class="visit-item">
+              <h4>Dewton LED</h4>
+              <span class="visit-badge">1-Day Industrial Observation</span>
+              <p>Gained direct exposure to LED product manufacturing, clean-room assembly procedures, illumination testing methods, and quality-control standards.</p>
+            </div>
+
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         7. PATENTS, PUBLICATIONS & CERTIFICATIONS
+         Patents, International Journal paper, and Certifications
+         ======================================================================= -->
+    <section class="patent-pub-section" id="patents-publications">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <circle cx="12" cy="8" r="7"></circle>
+              <polyline points="8.21 13.89 7 23 12 20 17 23 15.79 13.88"></polyline>
+            </svg>
+            <span>Research &amp; IP</span>
+          </div>
+          <h2 class="section-title">Patents &amp; <span class="gradient-text">Publications</span></h2>
+          <p class="section-subtitle">Intellectual property contributions and peer-reviewed scientific publications.</p>
+        </div>
+
+        <!-- 2 Column Grid: Left Patents, Right Publications -->
+        <div class="patent-pub-grid">
+          
+          <!-- Patents Box -->
+          <div class="highlight-box reveal">
+            <div class="highlight-box-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M12 2v4M12 18v4M4.93 4.93l2.83 2.83M16.24 16.24l2.83 2.83M2 12h4M18 12h4M4.93 19.07l2.83-2.83M16.24 7.76l2.83-2.83"></path>
+              </svg>
+              <span>Patents</span>
+            </div>
+            <div class="highlight-list">
+              <!-- Patent 1 -->
+              <div class="highlight-item">
+                <h4>Smart College Bus SMS Alert System</h4>
+                <p>An ESP32-based automated fleet notification architecture with GPS location tracking and door-sensor-triggered alerts.</p>
+                <div class="highlight-meta">
+                  <span>Patent Application No: 202641089152</span>
+                  <span>• Status: Published / Filed</span>
+                </div>
+              </div>
+
+              <!-- Patent 2 -->
+              <div class="highlight-item">
+                <h4>Compact and Energy-Efficient Solution for Menstrual Waste Disposal</h4>
+                <p>Automated thermal disposal mechanism featuring nichrome heating elements, temperature regulation, and forced cooling sequences.</p>
+                <div class="highlight-meta">
+                  <span>Status: Patent Filed</span>
+                  <span>• Eco-Friendly Thermal Engineering</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Publication Box -->
+          <div class="highlight-box reveal">
+            <div class="highlight-box-title">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+              </svg>
+              <span>Journal Publication</span>
+            </div>
+            <div class="highlight-list">
+              <div class="highlight-item">
+                <h4>Compact and Energy-Efficient Solution for Menstrual Waste Disposal</h4>
+                <p>
+                  <strong>Journal:</strong> International Journal of Scientific Research &amp; Engineering Trends (IJSRET)<br>
+                  <strong>Volume:</strong> Volume 12, Issue 3, May–June 2026<br>
+                  <strong>ISSN (Online):</strong> 2395-566X
+                </p>
+                <div class="highlight-meta">
+                  <a href="https://doi.org/10.5281/zenodo.20526664" target="_blank" rel="noopener noreferrer" style="color: var(--accent-cyan); text-decoration: underline;">
+                    DOI: 10.5281/zenodo.20526664
+                  </a>
+                </div>
+              </div>
+
+              <!-- Technical Workshop -->
+              <div class="highlight-item">
+                <h4>Grid Connected Solar Plant Design Using PV System</h4>
+                <p>Specialized workshop attended at KANAM’26, National-Level Intercollegiate Techno-Cultural-Sports Fest, Dr. N.G.P. Institute of Technology, Coimbatore.</p>
+                <div class="highlight-meta">
+                  <span>Solar PV Plant Design</span>
+                  <span>• Technical Workshop</span>
+                </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <!-- Certifications Subsection -->
+        <div class="cert-section-header reveal">
+          <h3>Professional Certifications &amp; Competitions</h3>
+        </div>
+
+        <div class="certs-grid">
+          <!-- Cert 1 -->
+          <div class="cert-card reveal">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="cert-info">
+              <h4>Embedded C with PIC</h4>
+              <p>Manfree Technologies</p>
+            </div>
+          </div>
+
+          <!-- Cert 2 -->
+          <div class="cert-card reveal">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="cert-info">
+              <h4>Programming in C</h4>
+              <p>Infosys Springboard</p>
+            </div>
+          </div>
+
+          <!-- Cert 3 -->
+          <div class="cert-card reveal">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="cert-info">
+              <h4>AI for Beginners</h4>
+              <p>HP LIFE Foundation</p>
+            </div>
+          </div>
+
+          <!-- Cert 4 -->
+          <div class="cert-card reveal">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="cert-info">
+              <h4>Project Horizon 2026</h4>
+              <p>KANAM'26 National Techno-Cultural Fest</p>
+            </div>
+          </div>
+
+          <!-- Cert 5 -->
+          <div class="cert-card reveal">
+            <div class="cert-icon">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><polyline points="20 6 9 17 4 12"></polyline></svg>
+            </div>
+            <div class="cert-info">
+              <h4>QuizOff 2026: India's Biggest AI Quiz</h4>
+              <p>CampusCrew on Unstop</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         8. ACHIEVEMENTS & VOLUNTEER LEADERSHIP
+         Academic Ranks, Technical Symposia, Sports, and Event Coordination
+         ======================================================================= -->
+    <section class="achievements-section" id="achievements">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"></polygon>
+            </svg>
+            <span>Recognition &amp; Leadership</span>
+          </div>
+          <h2 class="section-title">Achievements &amp; <span class="gradient-text">Leadership</span></h2>
+          <p class="section-subtitle">Excellence in academics, technical competitions, student mentorship, and sports.</p>
+        </div>
+
+        <div class="achievements-grid">
+          
+          <!-- Card 1: Academic & Technical Honors -->
+          <div class="achievement-card reveal">
+            <div class="achievement-header">
+              <div class="achievement-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M6 9H4.5a2.5 2.5 0 0 1 0-5H6"></path>
+                  <path d="M18 9h1.5a2.5 2.5 0 0 0 0-5H18"></path>
+                  <path d="M4 22h16"></path>
+                  <path d="M10 14.66V17c0 .55-.47.98-.97 1.21C7.85 18.75 7 20.24 7 22"></path>
+                  <path d="M14 14.66V17c0 .55.47.98.97 1.21C16.15 18.75 17 20.24 17 22"></path>
+                  <path d="M18 2H6v7a6 6 0 0 0 12 0V2z"></path>
+                </svg>
+              </div>
+              <h3>Academic &amp; Technical Awards</h3>
+            </div>
+            <div class="achievement-list">
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>Second Rank – Academic Performance:</strong> Awarded for outstanding performance in the 4th Semester (2025–2026 academic year) at Sri Shakthi Institute of Engineering and Technology.</p>
+              </div>
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>1st Place – Paper Presentation:</strong> Won first prize at the AURA’2.0 National Level Technical Symposium conducted at Adithya Institute of Technology.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 2: Volunteer & Leadership Experience -->
+          <div class="achievement-card reveal">
+            <div class="achievement-header">
+              <div class="achievement-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                  <circle cx="9" cy="7" r="4"></circle>
+                  <path d="M23 21v-2a4 4 0 0 0-3-3.87"></path>
+                  <path d="M16 3.13a4 4 0 0 1 0 7.75"></path>
+                </svg>
+              </div>
+              <h3>Volunteer &amp; Leadership</h3>
+            </div>
+            <div class="achievement-list">
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>Event Coordinator – KALAM 2026:</strong> Coordinated technical workshop activities, participant communication, event logistics, and on-site execution to ensure the smooth conduct of sessions at Sri Shakthi Institute of Engineering and Technology.</p>
+              </div>
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>Member – Media Guild:</strong> Contributed to the VELAN 2025 Pongal Celebration through photography and creative decoration, and coordinated media coverage for the Non-Technical Short Film Contest.</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Card 3: Sports & Co-Curricular Activities -->
+          <div class="achievement-card reveal">
+            <div class="achievement-header">
+              <div class="achievement-icon-wrap">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <polygon points="10 8 16 12 10 16 10 8"></polygon>
+                </svg>
+              </div>
+              <h3>Sports &amp; Co-Curriculars</h3>
+            </div>
+            <div class="achievement-list">
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>Winner:</strong> 19th Orientation Olympics (Kho-Kho), Sri Shakthi Institute of Engineering and Technology.</p>
+              </div>
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>Runner-up:</strong> 6th Orientation Olympics (Volleyball), Sri Shakthi Institute of Engineering and Technology.</p>
+              </div>
+              <div class="achievement-item">
+                <span class="item-bullet">✦</span>
+                <p><strong>Active Participant:</strong> Technical Symposia, Circuit Debugging Challenges, Paper Presentations, and College Project Expos.</p>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         9. CONTACT & REFERENCES SECTION
+         Direct contact channels, references, and simple prefilled email form
+         ======================================================================= -->
+    <section class="contact-section" id="contact">
+      <div class="container">
+        <!-- Section Header -->
+        <div class="section-header reveal">
+          <div class="section-tag">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+            </svg>
+            <span>Let's Connect</span>
+          </div>
+          <h2 class="section-title">Get in <span class="gradient-text">Touch</span></h2>
+          <p class="section-subtitle">Interested in discussing an internship, engineering project, or technical collaboration? Feel free to reach out directly.</p>
+        </div>
+
+        <div class="contact-grid">
+          
+          <!-- Left Column: Contact Channels & Academic References -->
+          <div class="contact-info-card reveal">
+            <div>
+              <div class="contact-info-header">
+                <h3>Contact Information</h3>
+                <p>Always open to exciting opportunities in electrical engineering, embedded systems, and IoT development.</p>
+              </div>
+
+              <div class="contact-items">
+                <!-- Email -->
+                <a href="mailto:jeevithasenthil71@gmail.com" class="contact-channel" title="Send an Email">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
+                  </div>
+                  <div class="channel-content">
+                    <small>Direct Email</small>
+                    <span>jeevithasenthil71@gmail.com</span>
+                  </div>
+                </a>
+
+                <!-- Phone -->
+                <a href="tel:+919942008781" class="contact-channel" title="Call Jeevitha">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
+                  </div>
+                  <div class="channel-content">
+                    <small>Phone / Mobile</small>
+                    <span>+91 9942008781</span>
+                  </div>
+                </a>
+
+                <!-- LinkedIn -->
+                <a href="https://www.linkedin.com/in/jeevitha-mani-773143333" target="_blank" rel="noopener noreferrer" class="contact-channel" title="LinkedIn Profile">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path><rect x="2" y="9" width="4" height="12"></rect><circle cx="4" cy="4" r="2"></circle></svg>
+                  </div>
+                  <div class="channel-content">
+                    <small>LinkedIn</small>
+                    <span>linkedin.com/in/jeevitha-mani-773143333</span>
+                  </div>
+                </a>
+
+                <!-- GitHub -->
+                <a href="https://github.com/jeevithasenthil9688-source" target="_blank" rel="noopener noreferrer" class="contact-channel" title="GitHub Profile">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </div>
+                  <div class="channel-content">
+                    <small>GitHub</small>
+                    <span>github.com/jeevithasenthil9688-source</span>
+                  </div>
+                </a>
+
+                <!-- Location -->
+                <div class="contact-channel">
+                  <div class="channel-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path><circle cx="12" cy="10" r="3"></circle></svg>
+                  </div>
+                  <div class="channel-content">
+                    <small>Location &amp; Mobility</small>
+                    <span>Palladam, Tiruppur | Open to relocate anywhere in India</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Academic References Box -->
+            <div class="references-badge-box">
+              <h4>Academic References</h4>
+              <p>
+                <strong>1. Dr. G. Sundar</strong> – HOD / EEE &nbsp;(Phone: 9842781393)<br>
+                <strong>2. Ms. Priyanka Gandhi M</strong> – Assistant Professor / EEE &nbsp;(Phone: 6379482112)<br>
+                <span style="font-size: 0.72rem; color: var(--text-muted); display: block; margin-top: 4px;">Sri Shakthi Institute of Engineering and Technology</span>
+              </p>
+            </div>
+          </div>
+
+          <!-- Right Column: Interactive Contact Form (Composes Mailto) -->
+          <div class="contact-form-card reveal">
+            <h3>Send a Direct Message</h3>
+            <p>Submitting this form immediately prepares a formatted email draft in your default email application (Gmail, Outlook, Apple Mail).</p>
+            
+            <form id="contact-form">
+              <div class="form-group">
+                <label for="contact-name">Your Full Name *</label>
+                <input type="text" id="contact-name" class="form-control" placeholder="e.g. John Doe" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-email">Your Email Address *</label>
+                <input type="email" id="contact-email" class="form-control" placeholder="name@company.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="contact-subject">Subject</label>
+                <input type="text" id="contact-subject" class="form-control" placeholder="Internship Opportunity / Project Collaboration">
+              </div>
+
+              <div class="form-group">
+                <label for="contact-message">Message *</label>
+                <textarea id="contact-message" class="form-control" placeholder="Write your message or inquiry here..." required></textarea>
+                <div class="form-hint">Tip: Clicking "Send Message" opens your email app with your note ready to send.</div>
+              </div>
+
+              <button type="submit" class="btn btn-primary" style="width: 100%;">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+                <span>Send Message</span>
+              </button>
+
+              <div id="form-feedback" style="display: none;"></div>
+            </form>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- =======================================================================
+         10. FOOTER
+         Copyright, Quick links & Back to Top Button
+         ======================================================================= -->
+    <footer class="site-footer">
+      <div class="container">
+        <div class="footer-top">
+          <div class="footer-brand">
+            <h4>Jeevitha Mani S</h4>
+            <p>Electrical &amp; Electronics Engineering Student • Embedded Systems &amp; IoT</p>
+          </div>
+          <div class="footer-links">
+            <a href="#hero">Home</a>
+            <a href="#about">About</a>
+            <a href="#projects">Projects</a>
+            <a href="#experience">Experience</a>
+            <a href="#contact">Contact</a>
+            <a href="assets/resume.pdf" download="Jeevitha_Mani_S_Resume.pdf">Download Resume</a>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2026 Jeevitha Mani S. All rights reserved.</p>
+          <p>Designed with clean HTML, CSS &amp; JavaScript • Electrical Engineering Theme</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Back to top floating button -->
+    <button class="back-to-top" id="back-to-top" aria-label="Back to top" title="Scroll to top">
+      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+  </div><!-- /.site-wrapper -->
+
+  <!-- JavaScript file -->
+  <script src="script.js"></script>
+</body>
+</html>
